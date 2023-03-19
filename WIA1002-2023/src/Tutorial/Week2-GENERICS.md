@@ -103,7 +103,7 @@ public class MyList<T> {
 }
 ```
 
-During compilation, ==the== compiler will replace all occurrences of the type parameter T with its upper bound, or with Object if no upper bound is specified.== This means that the resulting bytecode will not contain any information about the type parameter T, as it has been erased.
+During compilation, *the compiler will replace all occurrences of the type parameter T with its upper bound, or with Object if no upper bound is specified.* This means that the resulting bytecode will not contain any information about the type parameter T, as it has been erased.
 
 Java generics are implemented using erasure to maintain backward compatibility with pre-existing code that was written before the introduction of generics in Java. By implementing generics using erasure, Java made it possible to use generic code with non-generic legacy code that was not designed with generics in mind.
 
