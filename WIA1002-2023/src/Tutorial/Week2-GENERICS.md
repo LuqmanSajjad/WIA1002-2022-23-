@@ -89,3 +89,24 @@ Then container is considered a raw type because its type parameter has not been 
 Raw types are unsafe because they allow for the mixing of incompatible types, which can result in runtime errors. For example, if you have a Container object that is supposed to hold String values, but you add an Integer value to it, you can get a ClassCastException at runtime when you try to retrieve the value.
 
 Raw types are allowed in Java for backward compatibility with pre-Java 1.5 code, which did not have support for generics. By allowing raw types, Java code written before the introduction of generics can still compile and run, even if it is not type-safe. However, it is generally recommended to avoid raw types and use generics instead, as they provide type-safety and can catch errors at compile-time rather than runtime.
+
+
+## 4. What is erasure? Why are Java generics implements using erasure?
+Erasure is a process in Java Generics that replaces type parameters with their upper bounds or with Object if no upper bound is specified, and removes all generic type information at compile time. The resulting bytecode is then the same as if generics were not used at all.
+
+For example, consider the following generic class definition:
+
+```java
+public class MyList<T> {
+    private List<T> myList = new ArrayList<T>();
+    //...
+}
+```
+
+During compilation, ::the compiler will replace all occurrences of the type parameter T with its upper bound, or with Object if no upper bound is specified.:: This means that the resulting bytecode will not contain any information about the type parameter T, as it has been erased.
+
+Java generics are implemented using erasure to maintain backward compatibility with pre-existing code that was written before the introduction of generics in Java. By implementing generics using erasure, Java made it possible to use generic code with non-generic legacy code that was not designed with generics in mind.
+
+Using erasure also has the advantage of reducing the memory footprint of generic classes, as the compiled bytecode does not contain any type information about the type parameters. This can lead to more efficient runtime performance and smaller compiled bytecode size.
+
+However, the downside of using erasure is that it can lead to type safety issues at runtime, as the type information about the type parameters is lost during the compilation process. This means that the compiler cannot perform type checking at compile time, and the developer must take extra care to ensure type safety in their code.
