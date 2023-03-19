@@ -6,6 +6,7 @@ method called retrieve() that returns the initially declared variable.
 Create a main method within the Container class. Create two containers of type Integer and String.
 Append two objects to the containers, one of type Integer having value 50, another of type String
 having value Java. Display the Integer and String objects from the respective containers.
+
 ```java
 public class Container <T> {
     private T t;
@@ -87,4 +88,4 @@ Then container is considered a raw type because its type parameter has not been 
 
 Raw types are unsafe because they allow for the mixing of incompatible types, which can result in runtime errors. For example, if you have a Container object that is supposed to hold String values, but you add an Integer value to it, you can get a ClassCastException at runtime when you try to retrieve the value.
 
-Raw types are allowed in Java for backward compatibility with pre-Java 5 code, which did not have support for generics. By allowing raw types, Java code written before the introduction of generics can still compile and run, even if it is not type-safe. However, it is generally recommended to avoid raw types and use generics instead, as they provide type-safety and can catch errors at compile-time rather than runtime.
+Raw types are allowed in Java for backward compatibility with pre-Java 1.5 code, which did not have support for generics. By allowing raw types, Java code written before the introduction of generics can still compile and run, even if it is not type-safe. However, it is generally recommended to avoid raw types and use generics instead, as they provide type-safety and can catch errors at compile-time rather than runtime.
