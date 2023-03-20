@@ -110,3 +110,35 @@ Java generics are implemented using erasure to maintain backward compatibility w
 Using erasure also has the advantage of reducing the memory footprint of generic classes, as the compiled bytecode does not contain any type information about the type parameters. This can lead to more efficient runtime performance and smaller compiled bytecode size.
 
 However, the downside of using erasure is that it can lead to type safety issues at runtime, as the type information about the type parameters is lost during the compilation process. This means that the compiler cannot perform type checking at compile time, and the developer must take extra care to ensure type safety in their code.
+
+4.
+
+    Create a generic class named Duo that has two parameters, A and B. Declare a variable named first of
+    type A, and the second variable named second of type B. Create a constructor that accepts these two
+    parameters. In the constructor, assign these parameters respectively to the declared variables. 
+    
+    ```java
+    public class Duo <A, B>  {
+        private A a;
+        private B b;
+    
+        public Duo(A a, B b) {
+            this.a = a;
+            this.b = b;
+        }
+    }
+    ```
+ 
+5.
+  
+    Use the Duo class in Question 4 to declare and create two objects as follows :
+        a. First object called sideShape consist of respectively String type and Integer type.
+        b. Second object called points consists of two Double types. 
+    (Main method) ::
+    ```java
+    public static void main(String[] args) {
+        Duo<String, Integer> sideShape = new Duo<>("Kotak",223);
+        Duo<Double, Double> points = new Duo<>(3214.321, 12345.2342);
+    }
+    ```
+ 
