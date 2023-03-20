@@ -1,12 +1,5 @@
 # LAB 2 - GENERICS
-## 1. Create a generic class called MyGeneric that accepts one parameter.
-    Declare a variable called e for the type parameter. Create a no-arg
-    constructor. Create a constructor that accepts one generic parameter.
-    Create a setter and getter method for the generic type.
-    Create a test program that creates two instances of generic class of
-    type String called strObj and of type Integer called intObj. Set a
-    value for each of these objects. Display these values using the getter
-    method.
+## 1. Create a generic class called MyGeneric that accepts one parameter.Declare a variable called e for the type parameter. Create a no-argconstructor. Create a constructor that accepts one generic parameter.Create a setter and getter method for the generic type. Create a test program that creates two instances of generic class of type String called strObj and of type Integer called intObj. Set value for each of these objects. Display these values using the getter method.
 
 ``` java
 public class MyGeneric <e> {
@@ -34,10 +27,7 @@ public class MyGeneric <e> {
     }
 }
 ```
-## 2. In a class called CompareMax, create a generic static method called
-    maximum where the generic type extends the Comparable interface,
-    which receives three parameters. Find the maximum of three values
-    invoked by the main method.
+## 2. In a class called CompareMax, create a generic static method called maximum where the generic type extends the Comparable interface, which receives three parameters. Find the maximum of three values invoked by the main method.
 
 ``` java
 public class CompareMax {
@@ -121,4 +111,38 @@ public class StorePairGeneric <T> {
         return "first = " + first + " second = " + second;
     }
 }
+```
+## 3b) Override the Object equals() method in the StorePair class to compare the first values of two objects for equality.
+``` java
+@Override
+    public boolean equals(Object obj) {
+        return (obj == this.first);
+    }
+```
+
+## 3c) Have the StorePair class implement the Comparable interface. Override the compareTo()method to compare the first values of two objects.
+```java
+public class StorePairGeneric <T> implements Comparable<T> {
+
+    ...
+    ...
+
+    @Override
+    public int compareTo(T o) {
+        if (first > o) // error : bad operand type for binary operator
+            return 1;
+        if (first < o) // bad operand type for binary operator
+            return -1; 
+        return 0;
+    }
+}
+```
+
+## 3d) Create a test program that creates three objects of the StorePair generic class called a, b and c. Set the first and second values of a, b, c as (6,4), (2,2), (6,3).
+``` java
+work in progress...
+```
+## 3e) Invoke the compareTo()and equals() methods that compares the three objects created in (d) in the test program.
+``` java
+work in progress...
 ```
