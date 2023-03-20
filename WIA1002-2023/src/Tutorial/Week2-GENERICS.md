@@ -1,11 +1,12 @@
 # WEEK 2 - GENERICS
-## 1. Create a generic class called Container that accepts one parameter, T. Create a no-arg constructor.
-Declare a private variable, t of type T. Create a method, add that returns nothing, accepting a
-parameter of generic type. Initialize this parameter to the initially declared variable. Create a generic
-method called retrieve() that returns the initially declared variable.
-Create a main method within the Container class. Create two containers of type Integer and String.
-Append two objects to the containers, one of type Integer having value 50, another of type String
-having value Java. Display the Integer and String objects from the respective containers.
+1. 
+    **Create a generic class called Container that accepts one parameter, T. Create a no-arg constructor.
+    Declare a private variable, t of type T. Create a method, add that returns nothing, accepting a
+    parameter of generic type. Initialize this parameter to the initially declared variable. Create a generic
+    method called retrieve() that returns the initially declared variable.
+    Create a main method within the Container class. Create two containers of type Integer and String.
+    Append two objects to the containers, one of type Integer having value 50, another of type String
+    having value Java. Display the Integer and String objects from the respective containers.
 
 ```java
 public class Container <T> {
@@ -33,7 +34,8 @@ public class Container <T> {
 }
 ```
 
-## 2. Create a class called MyArray that has two methods, a main method that creates 3 arrays of
+2. **Create a class called MyArray that has two methods, a main method that creates 3 arrays of
+    
 a) integer containing the numbers 1,2,3,4 and 5
 b) string containing names, Jane, Tom and Bob
 c) character containing alphabet, a, b and c
@@ -58,8 +60,10 @@ c) character containing alphabet, a, b and c
     }
 }
 ```
- 
-## 3. What is a raw type? Why is a raw type unsafe? Why is the raw type allowed in Java?
+
+3. 
+    **What is a raw type? Why is a raw type unsafe? Why is the raw type allowed in Java? 
+    
 In Java, a raw type is a generic type that is used without specifying its type parameter(s).
 
 For example, consider the following generic class:
@@ -91,7 +95,9 @@ Raw types are unsafe because they allow for the mixing of incompatible types, wh
 Raw types are allowed in Java for backward compatibility with pre-Java 1.5 code, which did not have support for generics. By allowing raw types, Java code written before the introduction of generics can still compile and run, even if it is not type-safe. However, it is generally recommended to avoid raw types and use generics instead, as they provide type-safety and can catch errors at compile-time rather than runtime.
 
 
-## 4. What is erasure? Why are Java generics implements using erasure?
+4. 
+    **What is erasure? Why are Java generics implements using erasure?
+
 Erasure is a process in Java Generics that replaces type parameters with their upper bounds or with Object if no upper bound is specified, and removes all generic type information at compile time. The resulting bytecode is then the same as if generics were not used at all.
 
 For example, consider the following generic class definition:
@@ -111,8 +117,8 @@ Using erasure also has the advantage of reducing the memory footprint of generic
 
 However, the downside of using erasure is that it can lead to type safety issues at runtime, as the type information about the type parameters is lost during the compilation process. This means that the compiler cannot perform type checking at compile time, and the developer must take extra care to ensure type safety in their code.
 
-## 4.
-    Create a generic class named Duo that has two parameters, A and B. Declare a variable named first of
+4.
+    **Create a generic class named Duo that has two parameters, A and B. Declare a variable named first of
     type A, and the second variable named second of type B. Create a constructor that accepts these two
     parameters. In the constructor, assign these parameters respectively to the declared variables. 
     
@@ -129,7 +135,7 @@ However, the downside of using erasure is that it can lead to type safety issues
     ```
  
 5. 
-    Use the Duo class in Question 4 to declare and create two objects as follows :
+    **Use the Duo class in Question 4 to declare and create two objects as follows :
         a. First object called sideShape consist of respectively String type and Integer type.
         b. Second object called points consists of two Double types. 
     (Main method) ::
