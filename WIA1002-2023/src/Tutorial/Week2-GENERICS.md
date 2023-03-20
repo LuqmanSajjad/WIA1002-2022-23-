@@ -145,4 +145,10 @@ However, the downside of using erasure is that it can lead to type safety issues
         Duo<Double, Double> points = new Duo<>(3214.321, 12345.2342);
     }
     ```
- 
+    
+## When the compiler encounters a generic class, interface, or method with an unbound type parameter, such as \<T> or \<E>, it replaces all occurrences of the type parameter with what type?
+The type parameter is replaced by an actual type that is specified and applied to the parameter. This process is called type erasure. It is replaced during compile time
+   
+
+## When the compiler encounters a generic class, interface, or method with a bound type parameter, such as \<T extends Number> or \<E extends Comparable>, it replaces all occurrences of the type parameter with what type?
+Same as above, It is still replaced by the type applied to the given parameter, but the type is only bounded the subclasses of the Number and Comparable for T and E respectively
