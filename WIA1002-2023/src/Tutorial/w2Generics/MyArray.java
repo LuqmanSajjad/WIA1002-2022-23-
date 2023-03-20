@@ -23,7 +23,6 @@ public class MyArray {
         listAll(numbers);
         listAll(names);
         listAll(characters);
-        
     }
     
     public static <T> void listAll(T[] array) {
