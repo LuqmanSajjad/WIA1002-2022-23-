@@ -10,7 +10,6 @@ import java.io.IOException;
 import java.util.Scanner;
 
 /**
- *
  * @author jad
  */
 public class FutureLetter {

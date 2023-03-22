@@ -8,12 +8,8 @@ package Lab.w2Generics;
  *
  * @author jad
  */
-public class NewClass {
+public class CompareArray {
     public static void main(String[] args) {
-        
-    }
-    
-    public static <E> void  myMethod (E a) {
-        System.out.println("😂");
+        System.out.println("test");
     }
 }

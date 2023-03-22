@@ -4,6 +4,7 @@
  */
 package Lab.w1;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.Arrays;
@@ -30,7 +31,7 @@ public class StringProcessing {
             Scanner read = new Scanner (new FileInputStream("src/FilesW1/" + file[0])); // file[0] is the fiileName
             System.out.printf("\n** %s **\n", file[0]);
             
-            // reading
+            // reading as Strings
             while(read.hasNext()) {
                 String[] string = read.nextLine().split( file[1] ); // file[1] is the regex
                 for (String word: string) {
@@ -40,6 +41,7 @@ public class StringProcessing {
                 System.out.println();
             }  
             
+            read.close();
             System.out.println("Number of characters retrieved: "+count);
         }     
     }

@@ -52,7 +52,11 @@ public class StorePair {
  * @author jad
  * @param <T>
  */
+
 public class StorePairGeneric <T> implements Comparable<T> {
+    public static void main(String[] args) {
+        System.out.println("test");
+    }
     private T first, second;
     
     public StorePairGeneric(T first, T second) {
@@ -80,15 +84,17 @@ public class StorePairGeneric <T> implements Comparable<T> {
     
     @Override
     public boolean equals(Object obj) {
-        return (obj == this.first);
+        if (!(obj instanceof StorePairGeneric)) 
+            return (obj == this.first);
+        else return false;
     }
 
     @Override
     public int compareTo(T o) {
-        if (first > o) // error : bad operand type for binary operator
-            return 1;
-        if (first < o) // bad operand type for binary operator
-            return -1; 
+//        if (first > o) // error : bad operand type for binary operator
+//            return 1;
+//        if (first < o) // bad operand type for binary operator
+//            return -1; 
         return 0;
     }
     

@@ -25,6 +25,6 @@ public class Transaction {
     }
     
     public void display() {
-        System.out.printf("\n%25s %2c %10.2f %10.2f %10s ", date, type, amount, balance, description);
+        System.out.printf("\n%25s %10s %2c %10.2f %10.2f %10s ", date, type, amount, balance, description);
     } 
 }
