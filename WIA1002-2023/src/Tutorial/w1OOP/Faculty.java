@@ -33,5 +33,13 @@ public class Faculty extends Employee {
     
     public static void main(String[] args) {
         new Faculty(); // Faculty is instantiated 
+        System.out.println("\n\nNEW");
+        
     }
 }
+
+// the constructor of the super class will always be invokd first.
+// the constructo of a subclass will call the superclass constuctor first
+
+
+// it does not work
