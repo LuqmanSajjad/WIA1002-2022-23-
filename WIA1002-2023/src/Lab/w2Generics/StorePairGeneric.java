@@ -55,8 +55,12 @@ public class StorePair {
 
 public class StorePairGeneric <T> implements Comparable<T> {
     public static void main(String[] args) {
-        System.out.println("test");
+        StorePairGeneric<Integer> a = new StorePairGeneric<>(6, 4);
+        StorePairGeneric<Integer> b = new StorePairGeneric<>(2, 2);
+        StorePairGeneric<Integer> c = new StorePairGeneric<>(6, 3);
+        // equals and compareTo method invocation
     }
+    
     private T first, second;
     
     public StorePairGeneric(T first, T second) {
@@ -82,21 +86,35 @@ public class StorePairGeneric <T> implements Comparable<T> {
         return "first = " + first + " second = " + second;
     }
     
-    @Override
-    public boolean equals(Object obj) {
+    
+    public boolean equals(StorePairGeneric<T> obj) { // doesn't override tho, must use object data type insted of StorePair.. to override
         if (!(obj instanceof StorePairGeneric)) 
-            return (obj == this.first);
+            return (obj.getFirst() == this.first);
         else return false;
     }
 
     @Override
-    public int compareTo(T o) {
-//        if (first > o) // error : bad operand type for binary operator
-//            return 1;
-//        if (first < o) // bad operand type for binary operator
-//            return -1; 
-        return 0;
+    public int compareTo(T o) { // why the class is not StoreGen..
+        return 0;               // gave up.
+                                // thinking about using compareTo() but the type is missmatching. 
     }
+    
+    // @Override // Razin's answer, seen on stack
+    public int compareTo(StorePairGeneric<T> o) {
+
+        if (this.equals(o)) {
+            return 0;
+        }
+
+        int cmp = ((Comparable<T>) this.getFirst()).compareTo(o.getFirst());
+
+        if (cmp != 0) {
+            return cmp;
+        } else {
+            return ((Comparable<T>) this.getSecond()).compareTo(o.getSecond());
+        }
+    }
+    
     
     
 }
