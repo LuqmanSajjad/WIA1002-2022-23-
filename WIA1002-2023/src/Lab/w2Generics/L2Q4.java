@@ -25,7 +25,7 @@ import java.lang.reflect.Array;
          if a == b, it returns 0 
  * @author jad
  */
-public class L2Q5 {
+public class L2Q4 {
     public static void main(String[] args) {
         Integer[] intArray = {5,3,7,1,4,9,8,2};
         String[] strArray = {"red", "blue", "orange", "tan"};

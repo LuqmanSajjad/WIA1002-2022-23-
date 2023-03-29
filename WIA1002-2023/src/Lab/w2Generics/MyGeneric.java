@@ -32,10 +32,10 @@ public class MyGeneric <e> {
     }
     
     public static void main(String[] args) {
-        MyGeneric<String> strObj = new MyGeneric();
+        MyGeneric<String> strObj = new MyGeneric<>();
         strObj.set("hello");
         
-        MyGeneric<Integer> intObj = new MyGeneric();
+        MyGeneric<Integer> intObj = new MyGeneric<>();
         intObj.set(2342);
         
         System.out.println("String object value     : " + strObj.get());

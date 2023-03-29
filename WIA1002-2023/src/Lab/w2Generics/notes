@@ -1,6 +1,6 @@
 My question
 
-the use case of wild cards.
+the use case of wild cards. -> to simplify code. Avoiding the need to create more than 1 data type while still mantaining type safety
 
 The correct data type when overriding. specifically compareTo method.
 

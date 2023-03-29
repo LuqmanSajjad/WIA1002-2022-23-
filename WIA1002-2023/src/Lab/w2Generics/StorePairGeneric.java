@@ -4,6 +4,8 @@
  */
 package Lab.w2Generics;
 
+import java.util.Objects;
+
 /**
  3.a)  Modify the following program to become a generic class called
         StorePairGeneric. 
@@ -50,15 +52,17 @@ public class StorePair {
     three objects created in (d) in the test program.
     * 
  * @author jad
- * @param <T>
+// * @param <T>
  */
 
-public class StorePairGeneric <T> implements Comparable<T> {
+public class StorePairGeneric <T extends Comparable<T>> implements Comparable<StorePairGeneric<T>> {
     public static void main(String[] args) {
         StorePairGeneric<Integer> a = new StorePairGeneric<>(6, 4);
         StorePairGeneric<Integer> b = new StorePairGeneric<>(2, 2);
         StorePairGeneric<Integer> c = new StorePairGeneric<>(6, 3);
-        // equals and compareTo method invocation
+        
+        System.out.println(a.compareTo(c));
+        System.out.println(a.equals(c));
     }
     
     private T first, second;
@@ -80,41 +84,33 @@ public class StorePairGeneric <T> implements Comparable<T> {
         this.first = first;
         this.second = second;
     }
+
+//    @Override // default
+//    public boolean equals(Object obj) {
+//        if (this == obj) {
+//            return true;
+//        }
+//        if (obj == null) {
+//            return false;
+//        }
+//        if (getClass() != obj.getClass()) {
+//            return false;
+//        }
+//        final StorePairGeneric<?> other = (StorePairGeneric<?>) obj;
+//        return Objects.equals(this.first, other.first);
+//    }
     
     @Override
-    public String toString() {
-        return "first = " + first + " second = " + second;
-    }
-    
-    
-    public boolean equals(StorePairGeneric<T> obj) { // doesn't override tho, must use object data type insted of StorePair.. to override
-        if (!(obj instanceof StorePairGeneric)) 
-            return (obj.getFirst() == this.first);
-        else return false;
+    public boolean equals(Object other) { 
+        StorePairGeneric<T> o = (StorePairGeneric<T>) other;
+        return this.first.equals(o.getFirst());
     }
 
+   
     @Override
-    public int compareTo(T o) { // why the class is not StoreGen..
-        return 0;               // gave up.
-                                // thinking about using compareTo() but the type is missmatching. 
+    public int compareTo(StorePairGeneric<T> other) {
+        return this.first.compareTo(other.getFirst());
     }
-    
-    // @Override // Razin's answer, seen on stack
-    public int compareTo(StorePairGeneric<T> o) {
-
-        if (this.equals(o)) {
-            return 0;
-        }
-
-        int cmp = ((Comparable<T>) this.getFirst()).compareTo(o.getFirst());
-
-        if (cmp != 0) {
-            return cmp;
-        } else {
-            return ((Comparable<T>) this.getSecond()).compareTo(o.getSecond());
-        }
-    }
-    
     
     
 }

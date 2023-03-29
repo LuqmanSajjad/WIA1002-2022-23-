@@ -17,7 +17,8 @@ import java.util.ArrayList;
 public class CompareMax {
     public static void main(String[] args) {
         System.out.println(maximum(1,12,3));
-        System.out.println(maximum(1232.32, 325.22, 234.23));
+        System.out.println(maximum(12320.09, 325.22, 234.23));
+        System.out.println(maximum("this", "what", "ziggler"));
         
         ArrayList<Integer> test = new ArrayList<>();
         test.add(1);
@@ -27,7 +28,7 @@ public class CompareMax {
         System.out.println(test);
     }
     
-    static <T extends Comparable<T>> T maximum(T a, T b, T c) {
+    public static <T extends Comparable<T>> T maximum(T a, T b, T c) { // notice that we use extends, not implements.
         if(a.compareTo(b) > 0 && a.compareTo(c) > 0)
             return a;
         else if (b.compareTo(c) > 0)
