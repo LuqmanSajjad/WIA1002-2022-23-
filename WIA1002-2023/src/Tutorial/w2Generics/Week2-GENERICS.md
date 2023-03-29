@@ -98,7 +98,7 @@ Container container = new Container(); // raw type
 4. 
     **What is erasure? Why are Java generics implements using erasure?**
 
-   Erasure is a process in Java Generics that replaces type parameters with their upper bounds or with Object if no upper bound is specified, and removes all generic type information at compile time. The resulting bytecode is then the same as if generics were not used at all.
+   Erasure is a process in Java Generics that replaces type parameters with their upper bounds or with *Object* if no upper bound is specified, and removes all generic type information at compile time. The resulting bytecode is then the same as if generics were not used at all.
 
    For example, consider the following generic class definition:
 
@@ -117,7 +117,7 @@ public class MyList<T> {
 
    However, the downside of using erasure is that it can lead to type safety issues at runtime, as the type information about the type parameters is lost during the compilation process. This means that the compiler cannot perform type checking at compile time, and the developer must take extra care to ensure type safety in their code.
 
-4.
+5.
     **Create a generic class named Duo that has two parameters, A and B. Declare a variable named first of
     type A, and the second variable named second of type B. Create a constructor that accepts these two
     parameters. In the constructor, assign these parameters respectively to the declared variables.**
@@ -134,7 +134,7 @@ public class MyList<T> {
     }
     ```
  
-5. 
+6. 
     **Use the Duo class in Question 4 to declare and create two objects as follows :**
         a. First object called sideShape consist of respectively String type and Integer type.
         b. Second object called points consists of two Double types. 
@@ -146,9 +146,11 @@ public class MyList<T> {
     }
     ```
     
-## When the compiler encounters a generic class, interface, or method with an unbound type parameter, such as \<T> or \<E>, it replaces all occurrences of the type parameter with what type?
-   The type parameter is replaced by an actual type that is specified and applied to the parameter. This process is called type erasure. It is replaced during compile time
+7. 
+    When the compiler encounters a generic class, interface, or method with an unbound type parameter, such as \<T> or \<E>, it replaces all occurrences of the type parameter with what type?
+    **It changes to Object (type erasure)**
    
 
-## When the compiler encounters a generic class, interface, or method with a bound type parameter, such as \<T extends Number> or \<E extends Comparable>, it replaces all occurrences of the type parameter with what type?
-   Same as above, It is still replaced by the type applied to the given parameter, but the type is only bounded the subclasses of the Number and Comparable for T and E respectively
+8.
+    When the compiler encounters a generic class, interface, or method with a bound type parameter, such as \<T extends Number> or \<E extends Comparable>, it replaces all occurrences of the type parameter with what type?
+    **It is changed to the specified bounded data type Number and Comparable**

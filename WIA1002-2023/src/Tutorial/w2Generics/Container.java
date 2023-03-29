@@ -7,7 +7,9 @@ package Tutorial.w2Generics;
 /**
 Create a generic class called Container that accepts one parameter, T. Create a no-arg constructor.
 Declare a private variable, t of type T. Create a method, add that returns nothing, accepting a
-parameter of generic type. Initialize this parameter to the initially declared variable. Create a generic
+parameter of generic type. Initialize this parameter to the initially declared variable. 
+* 
+Create a generic
 method called retrieve() that returns the initially declared variable.
 Create a main method within the Container class. 
 * 
@@ -40,3 +42,7 @@ public class Container <T> {
         System.out.println(word.retrieve());
     }
 }
+
+// simplified: just create a generic class Container that has a var t (generic type), 
+//              Container methods: add(), retrieve(), 
+//              test the program.
