@@ -10,7 +10,6 @@ package Lab.w2Generics;
  */
 public class test {
     public static void main(String[] args) {
-        StorePairGeneric<Integer> a;
-        a = new StorePairGeneric(6,4);
+        
     }
 }
