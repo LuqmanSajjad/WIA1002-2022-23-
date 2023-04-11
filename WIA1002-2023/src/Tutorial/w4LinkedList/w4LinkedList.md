@@ -161,6 +161,22 @@ a) Based on the above figure, what is the name of the method for above operation
 b) Write codes to represent the above figure. (Kindly use the variables stated in the
 figure)
 ``` java
+public E removeLast() {
+    Node<E> pointer1 = head;
+    if(head==null) 
+        return null;
 
+    if(size==1) 
+        return removeFirst();
+    
+    while(temp.next != tail) {
+        pointer1 = pointer1.next;
+    }
+    
+    Node<E> temp = tail;
+    tail = pointer1;
+    tail.next = null;
+    return temp;
+}
 ```
 
