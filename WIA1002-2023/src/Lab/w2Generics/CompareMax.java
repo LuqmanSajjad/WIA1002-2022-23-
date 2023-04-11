@@ -40,7 +40,7 @@ public class CompareMax {
 }
 
 /*
-alt : more optimized in theoratically:
+alt : more optimized theoratically:
 
 public static <T extends Comparable<T>> T maximum(T a, T b, T c) {
         T max = a;

@@ -27,7 +27,6 @@ public class Duo <A, B>  {
     
     public static void main(String[] args) {
         Duo<String, Integer> sideShape = new Duo<>("Kotak",223);
-        Duo<Double, Double> points = new Duo<>(3214.321, 12345.2342);  // how to enter two different generic data type
-    }
-        
+        Duo<Double, Double> points = new Duo<>(3214.321, 12345.2342);  
+    }        
 }
