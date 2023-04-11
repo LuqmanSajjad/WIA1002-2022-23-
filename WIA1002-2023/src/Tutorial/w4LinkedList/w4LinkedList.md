@@ -40,7 +40,7 @@ need to consider to perform the operation in (d)?
 
 `Is the list empty? if empty then just add assign head to it. Else just do it normally`
   
-f) 
+f.
   Write a list of operations/steps/pseudocode needed to add the firstNode to the first
   location.
   
@@ -55,7 +55,7 @@ f)
   
 
   
-g) 
+g. 
     Write codes to assign the firstNode to the first location.
   
 ``` java
@@ -69,7 +69,7 @@ g)
   }
 ```
   
-h) Repeat (d) – (f), for the following operations :
+h. Repeat (d) – (f), for the following operations :
 i. addLast() – value of element, c
 
 ``` java
@@ -112,5 +112,55 @@ iv. removeLast()
 v. remove(int index) – remove at index 1
 
 
-continue question 2:
-https://spectrum.um.edu.my/pluginfile.php/1328931/mod_resource/content/0/T04%20-%20LinkedList%20%28Q%29.pdf
+
+## Question 2
+Given is a method containing incorrect statements that checks if an element is in a list.
+
+         public void operationX(E e) {
+           pointerB.next = pointerB;
+
+           for(int i++; i>size; int i) {
+           System.out.println(current.element);
+           if(current.element = e)
+           }
+
+           Node<E> pointerB = head;
+           return false;
+         }
+
+a) What is the name of the method for operationX?
+    `remove`
+b) Correct the statements by rewriting them in the correct order and syntax.Write the correct/right method name to replace operationX.
+    
+``` java
+public boolean operationX(E e) {
+    /* work in progress. I am not sure how to rearrange the code, without adding new lines of my own */
+    Node<E> current = head;
+
+    for(int i; i<size; i++) {
+        System.out.println(current.element);
+        if(current.next.element = e) {
+            current.
+            return true;
+        }
+        current = current.next; 
+    }
+
+    Node<E> pointerB = head;
+    return false;
+}
+```
+
+## Question 3
+Given the following nodes. Answer the following:
+<img width="715" alt="image" src="https://user-images.githubusercontent.com/127722651/231208565-6df3b3a2-37d2-48e2-ad99-2c074e9d36a9.png">
+
+a) Based on the above figure, what is the name of the method for above operation?
+    `removeLast()`
+    
+b) Write codes to represent the above figure. (Kindly use the variables stated in the
+figure)
+``` java
+
+```
+
