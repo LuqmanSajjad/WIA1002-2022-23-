@@ -4,7 +4,6 @@
  */
 package w2Generics;
 
-import Tutorial.w2Generics.*;
 import java.util.ArrayList;
 
 /**
