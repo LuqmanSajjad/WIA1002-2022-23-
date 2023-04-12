@@ -4,8 +4,6 @@
  */
 package w2Generics;
 
-import Tutorial.w2Generics.*;
-
 
 /**
  Create a class called MyArray that has two methods, a <main method that creates 3 arrays> of

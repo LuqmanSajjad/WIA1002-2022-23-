@@ -4,7 +4,6 @@
  */
 package w1OOP;
 
-import Tutorial.w1OOP.*;
 
 /**
  *

@@ -4,8 +4,6 @@
  */
 package w2Generics;
 
-import Tutorial.w2Generics.*;
-
 /**
 Create a generic class called Container that accepts one parameter, T. Create a no-arg constructor.
 Declare a private variable, t of type T. Create a method, add that returns nothing, accepting a

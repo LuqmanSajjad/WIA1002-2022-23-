@@ -40,6 +40,3 @@ public class Faculty extends Employee {
 
 // the constructor of the super class will always be invokd first.
 // the constructo of a subclass will call the superclass constuctor first
-
-
-// it does not work

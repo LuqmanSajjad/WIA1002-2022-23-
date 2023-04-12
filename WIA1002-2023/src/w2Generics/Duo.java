@@ -3,9 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package w2Generics;
-
-import Tutorial.w2Generics.*;
-
 /**
     5.  Create a generic class named Duo that has two parameters, A and B. Declare a variable named first of
         type A, and the second variable named second of type B. Create a constructor that accepts these two
