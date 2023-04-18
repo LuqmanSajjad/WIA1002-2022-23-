@@ -176,7 +176,7 @@ public E removeLast() {
     Node<E> temp = tail;
     tail = pointer1;
     tail.next = null;
-    return temp;
+    return temp;        // the only reason why temp exist
 }
 ```
 
