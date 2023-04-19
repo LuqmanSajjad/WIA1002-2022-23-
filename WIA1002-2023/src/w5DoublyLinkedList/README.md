@@ -108,3 +108,6 @@ A doubly linked list keeps a set of characters. The head, the middle and the tai
 contains alphabet ‘a’, ‘b’ and ‘c’. These nodes are in successive order. Create a new node that contains
 alphabet ‘z’. Add this new node at the last location of this linked list. Draw all of these nodes including
 their correct references
+
+<img width="435" alt="image" src="https://user-images.githubusercontent.com/127722651/232944391-f0e49840-1119-401f-a847-306f3eda543a.png">
+
