@@ -16,7 +16,7 @@
 12      head.element=e;
 13      return temp.element;
 14  }else{
-15      for (int i = 1; i < index; i++) {
+15      for (int i = 1; i < index; i++) { 
 16          current=current.next;
 17      }
 18  temp=current.next;
@@ -27,9 +27,15 @@
 ```
 Given method xyz with 2 arguments:
 a) Based on the above source code, explain what the lines of code do from line 10 – 21.
-    **If the index is 0, the new element is added to the head position. else, we will tranverse through the linkedlist to the index just before the required one. And start the adding new element operation.**
+
+**If the index is 0, the new element is added to the head position.** 
+**else, we will tranverse through the linkedlist to the index just before the required one.** 
+**And start the adding new element operation.**
+
 b) What is the main purpose of the method xyz()?
-    **adding the new element to the specified index by the user**
+
+**adding the new element to the specified index by the user**
+
 c) Obviously, there are some bugs in the source code. Debug the code and make it concise and 
 simpler.
 
@@ -83,6 +89,7 @@ public E xyz(int index,E e) {
 
 Based on the source code above, assume the index given is 3
 a) Explain what the lines of code do from line 2-11.
+
 **Whelp, on line 2 to 4 we transverse to the specified index 3.**
 **In line 7 to 8, we detached the pointer of the next and previous node, which was pointing to the current index 3 node**
 **In line 9 to 10 we just eliminated both pointers of the index 3 node which was pointing at the prev and next node**
