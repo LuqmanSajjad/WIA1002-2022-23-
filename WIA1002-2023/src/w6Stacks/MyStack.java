@@ -9,9 +9,6 @@ import java.util.ArrayList;
 /**
  Question 1 : create a MyStack class using ArrayList.
  * implement the following methods
- * 1) public void push(E 0);
-2) public E pop();
-3) public E peek();
  * @author jad
  */
 public class MyStack <E> {
