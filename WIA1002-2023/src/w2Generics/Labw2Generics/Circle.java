@@ -12,7 +12,7 @@ package w2Generics.Labw2Generics;
     integers that stores the following values, 1,2,3; (b) a list of string that
     stores red, green, blue and (c) a circle object of radius 3, 2.9 and 5.9.
     Invoke the max method as below:
-    public static <E extends Comparable<E>> E max(E[] list)
+    public static  E extends Comparable >E> E max(E[] list)
  The max method above returns the maximum value in an array. 
  * @author jad
  */
@@ -22,5 +22,5 @@ public class Circle implements Comparable {
     public int compareTo(Object o) {
         return 1;
     }
-    
+   
 }
