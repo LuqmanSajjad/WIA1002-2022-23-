@@ -10,9 +10,11 @@ s1 :
 s2 : two one
 s3 : 
 
+```
 top:      ||  two  ||
           ||  one  ||   
       s1      s2       s3
+```
       
 <img width="612" alt="image" src="https://user-images.githubusercontent.com/127722651/234828642-243cf94c-17af-4063-8c65-6e4df4d312f0.png">
 
