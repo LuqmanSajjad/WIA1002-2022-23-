@@ -14,12 +14,11 @@ public class SList<E> {
 
         E element;
         SNode<E> next;
+        SNode<E> prev=null;
 
         public SNode() {
         }
-
-        ;
-
+                               
         public SNode(E e) {
             this.element = e;
         }
@@ -29,19 +28,22 @@ public class SList<E> {
     SNode<E> tail;
     int size = 0;
 
+    /*
+    SList Constructor
+    */
     public SList() {
     }
 
     /*
 Append a new element at the end of the list.
      */
-    public E appendEnd(E e) {
-        SNode<E> temp = head;
-
+    public void appendEnd(E e) {  // similar to add last      
+        SNode<E> temp = head;       // temp here is not necessary, just refrence it to null and start working there
+        
         if (size > 0) {
-            for (int i = 1; i < size; i++) {
+            while(temp != tail) 
                 temp = temp.next;
-            }
+           
             tail = new SNode<>(e);
             temp.next = tail;
         } else {
@@ -49,13 +51,16 @@ Append a new element at the end of the list.
             tail = head;
         }
         size++;
-        return e;
     }
 
     /*
 Eliminate the first element in the list.
      */
     public E removeInitial() {
+        if (head==null) return null;
+        if (size == 1) {
+            // we need to handle for tail
+        }
         SNode<E> temp = head;
         head = head.next;
         temp.next = null;
@@ -78,16 +83,12 @@ Eliminate the first element in the list.
     }
 
     /*
-    Empty all elements in the list and return a statement that reports that the list is 
-    empty.  
+    Empty all elements in the list and return a statement 
+    that reports that the list is empty.  
      */
     public void clear() {
-        SNode<E> temp;
-        do {
-            temp = head.next;
-            head.next = null;
-            head = temp;
-        } while (temp != null);
+        tail = null;
+        head = null;
         size = 0;
     }
 
@@ -104,6 +105,7 @@ Eliminate the first element in the list.
 
     public static void main(String[] args) {
         SList<String> list = new SList<>();
+        
 //      1) Append the following values individually: “Linked list, is, easy.”
         list.appendEnd("Linked list");
         list.appendEnd("is");
@@ -113,12 +115,13 @@ Eliminate the first element in the list.
         list.display();
 
 //      3) Remove the word “Linked list” and display the removed value. 
-        System.out.println("Removed element: " + list.removeInitial());
+        System.out.println("\nRemoved element: " + list.removeInitial());
 
 //      4) Check if ‘difficult’ is in the list. 
-        System.out.println(list.contains("difficult"));
+        System.out.println("\n" + list.contains("difficult"));
 
 //      5) Clear the list.
         list.clear();
+        list.display();
     }
 }

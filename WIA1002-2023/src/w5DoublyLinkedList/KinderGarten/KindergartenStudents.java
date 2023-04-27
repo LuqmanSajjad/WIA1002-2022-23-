@@ -4,7 +4,6 @@
  */
 package w5DoublyLinkedList.KinderGarten;
 
-import w5DoublyLinkedList.*;
 import java.util.Scanner;
 
 /**

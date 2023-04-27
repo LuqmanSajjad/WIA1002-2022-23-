@@ -26,7 +26,7 @@ public class DoublyLinkedList<E> {
         list.addFirst(1);
         list.addLast(100);
         list.add(2, 2);
-//        list.displayAll();
+
         list.tranverseForward();
         list.tranverseBackward();
         System.out.println("\nsize: "+list.getSize());
@@ -45,6 +45,8 @@ public class DoublyLinkedList<E> {
         
         public Node(E e, Node<E> next, Node<E> prev) {
             this.element = e;
+            this.next = next;
+            this.prev = prev;
         }
     }
     
@@ -74,7 +76,6 @@ public class DoublyLinkedList<E> {
 //        if(size==0) addFirst(e);
 //        Node<E> newNode = new Node<>(e, null, tail);
 //        tail.next = newNode;
-//        tail = newNode;
 //        size++;
 
         Node<E> newNode = new Node<>(e, null, tail);
@@ -95,13 +96,9 @@ public class DoublyLinkedList<E> {
             addLast(e); 
         else {
             /*
-            create a pointer to tranverse the list
+            stop at index
             */
             Node<E> current = head;
-            
-            /*
-            stopping at the required index
-            */
             for (int i=0; i<index; i++)
                 current = current.next;
             
@@ -170,28 +167,9 @@ public class DoublyLinkedList<E> {
     }
     
     public void clear() {
-        Node<E> temp = head;
-        while (head!=null) {
-            temp = head.next;
-            head.next = head.prev = null;
-            head = temp;
-        }
-        size=0;
-    }
-    
-    public void clearBySajjad() {
-        if (size<2) {
-            head = null;
-            tail = null;
-        }
-
-        Node<E> current = head.next;
-        while (current!=null) {
-            current = current.next;
-            current.prev.next = null;
-            current.prev = null;
-        }
-        size = 0;
+       head = null;
+       tail = null; 
+       size=0;
     }
     
     public void displayAll() {
@@ -203,5 +181,5 @@ public class DoublyLinkedList<E> {
             current = current.next;
         } 
     }
-    
+
 }

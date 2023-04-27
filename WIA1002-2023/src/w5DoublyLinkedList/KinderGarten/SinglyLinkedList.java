@@ -4,8 +4,6 @@
  */
 package w5DoublyLinkedList.KinderGarten;
 
-import w5DoublyLinkedList.*;
-
 /**
  *
  * @author jad
