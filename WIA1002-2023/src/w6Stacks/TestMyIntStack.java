@@ -4,6 +4,7 @@
  */
 package w6Stacks;
 
+import Main.java;
 import java.util.Scanner;
 
 /**
@@ -29,6 +30,7 @@ public class TestMyIntStack {
             stack.push(scan.nextInt());
         
         System.out.println("\nStack size: "+stack.getSize());
+        
         // display
         System.out.println("\nPrinting the stack using pop()");
         for (int i = 0; !stack.isEmpty() ; i++) {
