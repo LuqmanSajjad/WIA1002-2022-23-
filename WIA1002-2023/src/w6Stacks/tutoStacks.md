@@ -18,6 +18,11 @@ top:      ||  two  ||
       
 <img width="612" alt="image" src="https://user-images.githubusercontent.com/127722651/234828642-243cf94c-17af-4063-8c65-6e4df4d312f0.png">
 
+a) yes, push 1, pop, push 2, pop, push 3, pop 
+b) yes, push 1, push 2, pop, push 3, pop, pop
+c) yes, push 1, push 2, push 3, pop, pop, pop
+d) yes, push 1, pop, push 2, push 3, pop, pop
+
 <img width="466" alt="image" src="https://user-images.githubusercontent.com/127722651/234834084-a17bd2a9-d7d9-49d4-bc1d-03232725d888.png">
 
 a)  a b c * +
