@@ -99,7 +99,7 @@ public class TestMyIntStack {
         System.out.println("\nStack size: "+stack.getSize());
         // display
         System.out.println("\nPrinting the stack using pop()");
-        for (int i = 0; !stack.isEmpty() ; i++) {
+        while(!stack.isEmpty()) {
             System.out.println(stack.pop());
         }
     }
