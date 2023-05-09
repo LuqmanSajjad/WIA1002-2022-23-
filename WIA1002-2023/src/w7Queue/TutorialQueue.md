@@ -66,28 +66,36 @@ true true true true true
 
 Given the resulting queue X above, what would be the result of each of the following?
 
+a)
+```
+X.front();
+```
+`5`
+
+b)
+```
+Y = X.dequeue();
+X.enqueue(new Integer(10));
+X.front();
+```
 `
-a) X.front();
+X = [7, 9, 2, 4] Y = 5
+
+X = [7, 9, 2, 4, 10] 
+
+7
 `
 
-```5```
-
-`b) Y = X.dequeue();`
-```X = [7, 9, 2, 4] Y = 5```
-
-`X.enqueue(new Integer(10));`
-```X = [7, 9, 2, 4, 10] ```
-
-`X.front();`
+c)
+```
+Y = X.dequeue();
+```
 ```7```
 
-`c) Y = X.dequeue();`
-```X = [9, 2, 4, 10] Y = 7```
-
+```
 d) X.front();`
 ```
-9
-```
+`9`
 
 5. Provide and explain three operations / functions of Linked List based Queue that you can add
 to the GenericQueue class, other than those discussed in the lecture (i.e., enqueue, dequeue
