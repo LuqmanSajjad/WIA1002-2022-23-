@@ -31,31 +31,69 @@ System.out.println();
 
 (a) What is the output for the following input sequence?
 
-```true false false true true```
+`true false false true true`
 
+**OUTPUT:**
+```
+1 4 5 false false 
+```
 
 (b) Is it possible to have output: 1 3 5 4 2? If yes, give an input sequence that produces the
 output; or else, provide justification to your answer.
+
+```
+No because printing i can only be done incrementally based on the for loop above.
+```
+
 (c) Give at least three input sequences that produce the output: 1 2 3 4 5
+```
+// input 1 
+true true true true true
+// input 2
+
+```
 4. Hand trace a queue X through the following operations:
- X.enqueue(new Integer(14));
- X.enqueue(new Integer(3));
- X.enqueue(new Integer(5));
- Object Y = X.dequeue();
- X.enqueue(new Integer(7));
- X.enqueue(new Integer(9));
- Y = X.dequeue();
- X.enqueue(new Integer(2));
- X.enqueue(new Integer(4));
+
+    X.enqueue(new Integer(14));     // X = [14]
+    X.enqueue(new Integer(3));      // X = [14, 3]
+    X.enqueue(new Integer(5));      // X = [14, 3, 5]
+    Object Y = X.dequeue();         // X = [3, 5] Y = 14
+    X.enqueue(new Integer(7));      // X = [3, 5, 7] 
+    X.enqueue(new Integer(9));      // X = [3, 5, 7, 9] 
+    Y = X.dequeue();                // X = [5, 7, 9] Y = 3
+    X.enqueue(new Integer(2));      // X = [5, 7, 9, 2] Y = 3
+    X.enqueue(new Integer(4));      // X = [5, 7, 9, 2, 4] Y = 3
+
 Given the resulting queue X above, what would be the result of each of the following?
-WIA1002/WIB1002 FCSIT, UM
-UO Page 2
-a) X.front();
-b) Y = X.dequeue();
-X.enqueue(new Integer(10));
-X.front();
-c) Y = X.dequeue();
-d) X.front();
+
+`a) X.front();`
+```5```
+
+`b) Y = X.dequeue();`
+```X = [7, 9, 2, 4] Y = 5```
+
+`X.enqueue(new Integer(10));`
+```X = [7, 9, 2, 4, 10] ```
+
+`X.front();`
+```7```
+
+`c) Y = X.dequeue();`
+```X = [9, 2, 4, 10] Y = 7```
+
+d) X.front();`
+```
+9
+```
+
 5. Provide and explain three operations / functions of Linked List based Queue that you can add
 to the GenericQueue class, other than those discussed in the lecture (i.e., enqueue, dequeue
 and getSize – from Slide 10 in the lecture slide).
+
+```
+void addLast(O o) - basically just like queue
+void removeFirst(O o) - basically just dequeue
+
+others are just utilities: 
+void getIndex(O o) - 
+```
