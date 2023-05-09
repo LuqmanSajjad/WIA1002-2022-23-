@@ -66,7 +66,10 @@ true true true true true
 
 Given the resulting queue X above, what would be the result of each of the following?
 
-`a) X.front();`
+`
+a) X.front();
+`
+
 ```5```
 
 `b) Y = X.dequeue();`
