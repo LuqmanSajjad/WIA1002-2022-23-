@@ -5,20 +5,50 @@
 package w7Queue;
 import w4LinkedList.Labw4LinkedList.MyLinkedList;
 /**
- a) Write a generic queue class called MyQueue using LinkedList. Implement the following
-methods:
-a. public MyQueue(E[] e)
-b. public MyQueue()
-c. public void enqueue(E e)
-d. public E dequeue()
-e. public E getElement(int i)
-f. public E peek()
-g. public int getSize()
-h. public boolean contains(E e)
-i. public boolean isEmpty();
-j. public String tostring()
  * @author jad
  */
-public class MyQueue {
-    
+public class MyQueue<E> {
+    private MyLinkedList<E> queue;
+
+    public MyQueue(E[] e) {
+        for(E element: e) {
+            queue.addLast(element);     // change to enqueue
+        }
+    }
+
+    public MyQueue() {
+        queue = new MyLinkedList<E>();
+    }
+
+    public void enqueue(E e) {
+        queue.addLast(e);
+    }
+
+    public E dequeue() {
+        return queue.removeLast();
+    }
+
+    public E getElement(int i) {
+        return queue.get(i);
+    }
+
+    public E peek() {
+        return queue.getFirst();
+    }
+
+    public int getSize() {
+        return queue.size();
+    }
+
+    public boolean contains(E e) {
+        return queue.contains(e);
+    }
+
+    public boolean isEmpty() {
+        return queue.isEmpty();
+    }
+
+    public String toString() {
+        return queue.toString();
+    }
 }

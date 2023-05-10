@@ -118,20 +118,6 @@ public class MyLinkedList<E> {
         }
         return current;
     }
-
-    /*
-    there is a problem with my toString method
-     */
-//    @Override
-//    public String toString() {
-//        StringBuilder write = new StringBuilder();
-//        Node<E> current = head;
-//        do { 
-//            write.append(current.element);
-//        } while (current != tail);
-//        
-//        return "["+write.toString()+"]";
-//    }
     
     public int indexOf(E e) {
         int index = 0;
@@ -221,16 +207,40 @@ public class MyLinkedList<E> {
         return size;
     }
 
-    public Node<E> getFirst() {
-        return getNode(0);
+    public E getFirst() {
+        return getNode(0).element;
     }
 
-    public Node<E> getLast() {
-        return getNode(size-1);
+    public E getLast() {
+        return getNode(size-1).element;
     }
 
-    public Node<E> contains(String c) {
+    public E get(int i) {
+        Node<E> element = this.getNode(i);
+        return element.element;
+    }
+
+    public boolean contains(E o) {
         Node<E> node = head;
-        return head;            // not completed yet
+        while (node != null) {
+            if(node.element.equals(o))
+                return true;
+            node = node.next;
+        }
+        return false;
+    }
+
+    public boolean isEmpty() {
+        return (head == null);
+    }
+
+    public String toString() {
+        Node<E> node = head;
+        String output = "";
+        while (node != null) {
+            output += node.element.toString() + ", ";
+            node = node.next;
+        }
+        return output; 
     }
 }
