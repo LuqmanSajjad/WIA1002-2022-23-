@@ -2,13 +2,15 @@
 
 1. Name four everyday examples of a queue other than those discussed during lecture.
 ```
-
+- breadth first search
+- queueing for a service 
+- printer queueing task
 ```
 
 2. What is the difference between a queue and stack?
 ```
 - Queue first in first out, Stack first in last out
-- 
+- Queue has 2 gate, stack only has 1
 ```
 
 3. Use the following code segment to answer parts (a) through (c):
@@ -35,7 +37,7 @@ System.out.println();
 
 **OUTPUT:**
 ```
-1 4 5 false false 
+1 4 5 2 3 
 ```
 
 (b) Is it possible to have output: 1 3 5 4 2? If yes, give an input sequence that produces the
