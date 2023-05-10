@@ -44,7 +44,7 @@ System.out.println();
 output; or else, provide justification to your answer.
 
 ```
-No because printing i can only be done incrementally based on the for loop above.
+no, because the decremental step of the sequenece can possibly happen once or less.
 ```
 
 (c) Give at least three input sequences that produce the output: 1 2 3 4 5
