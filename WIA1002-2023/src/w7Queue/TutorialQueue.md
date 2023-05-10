@@ -49,10 +49,10 @@ no, because the decremental step of the sequenece can possibly happen once or le
 
 (c) Give at least three input sequences that produce the output: 1 2 3 4 5
 ```
-// input 1 
+// you can't put a true after false
 true true true true true
-// input 2
-
+false false false false
+true false false false
 ```
 4. Hand trace a queue X through the following operations:
 
