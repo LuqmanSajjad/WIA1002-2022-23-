@@ -37,6 +37,7 @@ public class MyLinkedList<E> {
     public void addLast(E e) {
         if (size == 0) {
             addFirst(e);
+            return;
         }
         tail.next = new Node<E>(e);
         tail = tail.next;

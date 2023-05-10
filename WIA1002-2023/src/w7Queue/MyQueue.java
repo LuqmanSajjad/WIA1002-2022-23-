@@ -9,10 +9,11 @@ import w4LinkedList.Labw4LinkedList.MyLinkedList;
  */
 public class MyQueue<E> {
     private MyLinkedList<E> queue;
-
+    
     public MyQueue(E[] e) {
+        queue = new MyLinkedList<E>();
         for(E element: e) {
-            queue.addLast(element);     // change to enqueue
+            queue.addLast(element);    
         }
     }
 
@@ -25,7 +26,7 @@ public class MyQueue<E> {
     }
 
     public E dequeue() {
-        return queue.removeLast();
+        return queue.removeFirst();
     }
 
     public E getElement(int i) {
