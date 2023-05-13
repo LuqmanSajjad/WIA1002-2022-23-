@@ -23,5 +23,5 @@ adjency list, as it is more simple
   
 
 ## 3  Write code to create the graph using linked-list representation. You use the adjacency matrixor the adjacency list for this purpose?
-I use pickacu
+I implemented it using linked list because I am a phsyco
 
