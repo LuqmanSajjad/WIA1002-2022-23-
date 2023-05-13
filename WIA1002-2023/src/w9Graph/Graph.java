@@ -84,7 +84,7 @@ public class Graph {
                         edge newEdge = new edge(destination, null);
                         
                         if(source.totalEdges == 0)                  
-                            source.firstEdge = newEdge;         // first edge (head) is the newEdge
+                            source.firstEdge = newEdge;         // first edge (head) is the newEdge .. the lecture seems to not have this condition for ==0. ??
                         else {
                             edge temp = source.firstEdge;
                             while(temp.nextEdge != null)      // tranverse to the last edge to add a new edge
