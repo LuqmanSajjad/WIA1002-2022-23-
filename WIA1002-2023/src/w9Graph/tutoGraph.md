@@ -1,7 +1,8 @@
 # Tutorial Graph
 
 <img width="657" alt="image" src="https://github.com/LuqmanSajjad/WIA1002-2022-23-/assets/127722651/f46efe55-c6df-4676-8812-db776fc19ab4">
-```
+
+``` java
 { { 0 0 1 1 0 0 0 0 0 },  // A
   { 0 0 0 1 0 0 0 0 0 },  // B
   { 0 0 0 0 1 1 0 0 0 },  // C
