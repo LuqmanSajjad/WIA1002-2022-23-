@@ -36,8 +36,8 @@ public static void main(String args[]) {
 The queue elements:
 C++
 Fortran
+Python         _//changing the priority queue directly to String doesn't includes the logical order of them as in the memory_
 Java
-Python
 ```
 
 ``` java
@@ -50,8 +50,8 @@ Python
 ```
 After poll():
 Fortran
-Java
 Python
+Java
 ```
 
 ``` java
