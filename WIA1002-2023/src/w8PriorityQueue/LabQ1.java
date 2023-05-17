@@ -38,7 +38,7 @@ public class LabQ1 {
         queue.add(5);
         
         Integer[] toArray = queue.toArray(new Integer[queue.size()]);
-        
+
         System.out.println("peeked: " + queue.peek());
         
         System.out.println("contains \"1\"? :" + queue.contains(1));
@@ -59,5 +59,8 @@ public class LabQ1 {
             
     }
 }
+
+// by default it is lowest priority out
+// in String, Z has higher priority, that's why A always comeout first
 
 

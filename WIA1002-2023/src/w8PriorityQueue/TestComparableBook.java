@@ -13,7 +13,7 @@ import java.util.Queue;
 public class TestComparableBook {
 
     public static void main(String[] args) {
-        Queue<ComparableBook> BookQueue = new java.util.PriorityQueue<>();
+        Queue<ComparableBook> BookQueue = new java.util.PriorityQueue<>();      
         BookQueue.add(new ComparableBook(1065, "Effective Java: Third Edition"));
         BookQueue.add(new ComparableBook(3012, "Java: A Beginner Guide Seventh Edition"));
         BookQueue.add(new ComparableBook(1097, "Learn Java in One Day and Learn It Well"));
@@ -42,10 +42,12 @@ class ComparableBook implements Comparable<ComparableBook> {
         this.title = title;
     }
     
+    @Override
     public String toString() {
         return "\n" + id + ": " + title;
     }
 
+    @Override
     public int compareTo(ComparableBook o) {
         if (this.id > o.id) {
             return 1;

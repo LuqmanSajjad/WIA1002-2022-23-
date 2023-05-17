@@ -36,7 +36,7 @@ public static void main(String args[]) {
 The queue elements:
 C++
 Fortran
-Python         _//changing the priority queue directly to String doesn't includes the logical order of them as in the memory_
+Python         //changing the priority queue directly to String doesn't includes the logical order of them as in the memory. Iterator uses Collections which won't collerate correctly
 Java
 ```
 
@@ -123,3 +123,6 @@ Muhamad
 Ali
 Jason
 ```
+
+
+### take away from lab
