@@ -23,7 +23,7 @@ public static void main(String args[]) {
     System.out.println("peek() gives us: "+ pQueue.peek()); //(a)
 ```
 ```
-C++
+"peek() gives us: C++
 ```
 
 ``` java
@@ -33,6 +33,7 @@ C++
     System.out.println(itr.next()); //(b)
 ```
 ```
+The queue elements:
 C++
 Fortran
 Java
@@ -47,6 +48,7 @@ Python
     System.out.println(itr2.next()); //(c)
 ```
 ```
+After poll():
 Fortran
 Java
 Python
@@ -60,6 +62,7 @@ Python
     System.out.println(itr3.next()); //(d)
 ```
 ```
+After remove():
 Fortran
 Python
 ```
