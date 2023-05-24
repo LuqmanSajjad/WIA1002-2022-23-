@@ -25,6 +25,7 @@ public Edge<T, N> removeEdge(T source, T destination) {
             while(currentEdge != null) {
                 if(currentEdge.toVertex.vertexInfo.compareTo(destination) == 0) {
                     prevEdge.nextEdge = currentEdge.nextEdge;   // i didn't remove the linkage between the removed edge to the list. is it fine?
+                    break;
                 }
                 prevEdge = currentEdge;
                 currentEdge = currentEdge.nextEdge;
