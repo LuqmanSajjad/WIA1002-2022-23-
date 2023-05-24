@@ -3,9 +3,9 @@
 ## 1. The addEdge method in WeightedGraph.java adds only directed edges. Create an addUndirectedEdge method that creates undirected edges. This method receives two vertices and a weight and return a boolean.
 ``` java
 public boolean addUndirectedEdge(T source, T destination, N w) {
-    addEdge(source, destination, w);
-    addEdge(destination, source, w);
-    return false;
+    boolean a = addEdge(source, destination, w);
+    boolean b = addEdge(destination, source, w);
+    return (a && b);
 }
 ```
 
