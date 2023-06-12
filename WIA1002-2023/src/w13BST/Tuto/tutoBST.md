@@ -29,4 +29,7 @@ c. inorder transversal - 1+2
 
 
 ## 6. Again, using the same BST in Question 3 (i.e., ignoring the deletion of 0030’ in Question 5), delete the element 0050’. Draw thevresulting tree.
+![telegram-cloud-photo-size-5-6068880757838952315-y](https://github.com/LuqmanSajjad/WIA1002-2022-23-/assets/116793007/4292bd1b-7c51-43e6-a365-b2ce568e910f)
+
+
 
