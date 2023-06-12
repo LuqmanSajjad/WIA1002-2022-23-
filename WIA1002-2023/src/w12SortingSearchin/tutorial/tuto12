@@ -1,0 +1,35 @@
+# Tutorial Searching Sorting week 12
+## 1. Compare between linear search and binary search algorithms by searching for the numbers 45 and 54 in the following list :
+**3 8 12 34 54 85 61 110**
+
+- Linear search serach the element by iterating all the element in an array one by one
+- binary search requires sorting first of all 
+
+## 2. Describe the technique for each sort algorithm below. Given the following list:
+**90 8 7 56 125 237 9 1 653**
+
+Show a trace of execution for:
+
+a. Selection sort (complexity n log n)
+``` 
+// compare the current element with the remaining
+iterate forward
+    find the minimum one from the remaining elements 
+    if found, swap
+```
+
+b. Insertion sort
+```
+// compare the current element with the previous sorted
+iterate forward 
+    compare the current with the previous, 
+    offset the previous sorted to the desired index
+    place the element
+```
+c. Bubble sort
+```
+```
+
+d. Merge sort
+```
+```

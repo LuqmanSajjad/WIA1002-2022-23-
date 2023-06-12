@@ -10,20 +10,19 @@ package LABTEST2;
  * 
  * 
  */
-public class DIOStack<V> {
+public class DIOStack<DIO> {
     
     public static void main(String[] args) {
 //        DIOStack<String> = new DIOStack<>();
     }
     
     
-    private V[] array = (V[]) new Object[1];
+    private DIO[] array = (DIO[]) new Object[1];
     private int size = 0;
 
-    public void push(V o) {
+    public void push(DIO o) {
         if (array.length == size) {
-            V[] newArray = (V[]) new Object[array.length*2];
-            
+            DIO[] newArray = (DIO[]) new Object[array.length*2];
             System.arraycopy(array, 0, newArray, 0, size);
             array = newArray;
         } 
@@ -31,21 +30,21 @@ public class DIOStack<V> {
         size++;
     }
 
-    public V pop() {
+    public DIO pop() {
         if (size==0) return null;
         
-        V removed = array[size-1];
+        DIO removed = array[size-1];
         array[size-1] = null;
         size--;
         if (size == array.length/4) {
-            V[] newArray = (V[]) new Object[array.length/2];
+            DIO[] newArray = (DIO[]) new Object[array.length/2];
             System.arraycopy(array, 0, newArray, 0, size);
             array = newArray;
         }
         return removed;
     }
 
-    public V peek() {
+    public DIO peek() {
         return (size==0)? null : array[size-1];
     }
 
@@ -60,7 +59,7 @@ public class DIOStack<V> {
     @Override
     public String toString() {
         String output = "";
-        for (V element: array) {
+        for (DIO element: array) {
             if (element == null) break;
             output += ("\n" + element.toString());
         }
@@ -70,7 +69,7 @@ public class DIOStack<V> {
     private void resize(int size) {
         if (size < array.length) System.out.println("to small to fit all");
         else {
-            V[] newArray = (V[]) new Object[size];
+            DIO[] newArray = (DIO[]) new Object[size];
             System.arraycopy(array, 0, newArray, 0, this.size);
             array = newArray;
         }

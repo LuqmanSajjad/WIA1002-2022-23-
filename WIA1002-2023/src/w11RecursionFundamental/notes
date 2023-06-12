@@ -1,0 +1,19 @@
+Recursion is hard
+
+here's are what I learn through out :: 
+
+One of the ways to frame your recurison, you wirte these cont eqn
+it might helps to write the return statement before the base function 
+
+    return a + function(bcd) + function(cd) + .. 
+
+sometimes if you can visualise the output table, you can find underlying patterns that yuo can cheat through::
+ * pascal triangle, s
+
+
+you can assume recursion as a normal if else structure
+
+
+
+
+

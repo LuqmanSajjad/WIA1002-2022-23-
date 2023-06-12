@@ -1,0 +1,38 @@
+# Lab Recursion Fundamental week 11
+
+## 1. Create a recursive function that accepts a String parameter, and substitute any of the lowercase “a” (no applicable for uppercase "A") found with “i” char. Example: substituteAI ("flabbergasted ") → "flibbergisted " substituteAI ("Astronaut ") → " Astroniut" 
+
+``` java
+public static String substituteAI(String string) {
+    char letter = string.charAt(0);
+    if (letter == 'a') letter = 'i';
+
+    if (string.length() == 1) 
+        return letter + "";
+    return letter + substituteAI(string.substring(1));
+}
+```
+
+## 2. 
+
+###solution kwanYang
+```
+
+```
+
+## 3. Write a recursive method called exponent(x,y) to perform exponentiation return xy, assuming
+```
+y >= 0. Example:
+exponent(10,3) → will produce an output of 1000
+Method signature as follows:
+public static long exponent(int x, int m) {
+}
+```
+
+``` java
+public static long exponent (int x, int m) {
+    if (m==0) return 1;
+    if (m==1) return x;
+    return x*exponent(x,m-1);
+}
+```
