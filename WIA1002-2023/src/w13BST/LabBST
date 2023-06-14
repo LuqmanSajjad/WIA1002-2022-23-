@@ -12,6 +12,7 @@ b) Implement the following methods in class BST<E>:
 
 i. public boolean search(E e)
 Returns true if the element is in the tree
+
 ii. public boolean insert(E e)
 Insert element o into the binary tree and return true if the element is inserted
 successfully
@@ -65,5 +66,4 @@ Updated Inorder data (sorted): 1 2 6 14 20 28 32 42 45 54 65 76 86 88 98 100
 Min Value :1
 Max Value :100
 A path from the root to 6 is: 45 1 2 20 6
-
 ```

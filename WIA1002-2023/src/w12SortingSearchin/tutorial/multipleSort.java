@@ -56,6 +56,12 @@ public class multipleSort {
         print(selecting);
        
         
+        System.out.println("\n\n## Quick sort ");
+        int[] quickies = new int[test.length];
+        System.arraycopy(test, 0, quickies, 0, test.length);
+        quickSort(quickies);
+        print(quickies);
+        
 //        
     }
     
@@ -88,7 +94,6 @@ public class multipleSort {
     }
     
     public static void mergeSort(int[] list) {
-        
         if (list.length >1) {
             calledMergeSort++;
             // merge sort first half
@@ -134,9 +139,7 @@ public class multipleSort {
             boolean swapped = false;
             for (int j=input.length-1; j>i; j--) {
                 if (input[j-1] > input[j]) {
-                    int hold = input[j-1];
-                    input[j-1] = input[j];
-                    input[j] = hold;
+                    swap(input, j, j-1);
                     swapped = true;
                 }
                 iteration++;                    // this point is considered an iteration
@@ -172,5 +175,40 @@ public class multipleSort {
             print(input);
         }
         System.out.println("Iterations" + iteration);
+    }
+    
+    private static int partition(int[] arr, int low, int high) {
+        int pivot = arr[high];
+        int i=low-1;
+        // i represent the boudary in which the smaller elements than the pivot has been swapped to left side
+        
+        for(int j=low; j<high; j++) {
+            if (arr[j]<=pivot) {
+                i++;
+                swap(arr, i, j);
+            }
+        }
+        swap(arr, high, i+1);
+        return i+1;
+        // returned the new pivot possition
+    }
+    
+    private static void quickSort (int[] arr) {
+        quickSort(arr, 0, arr.length-1);
+    }
+    
+    private static void quickSort(int[] arr, int low, int high) {
+        if (low<high) {
+            int pivot = partition(arr, low, high);
+            
+            quickSort(arr, low, pivot-1);
+            quickSort(arr, pivot+1, high);
+        }
+    }
+    
+    private static void swap (int arr[], int i, int j) {
+        int hold = arr[i];
+        arr[i] = arr[j];
+        arr[j] = hold;
     }
 }
