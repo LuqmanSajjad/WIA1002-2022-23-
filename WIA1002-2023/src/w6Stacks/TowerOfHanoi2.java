@@ -13,8 +13,15 @@ public class TowerOfHanoi2 {
     static MyStack<Integer> peg2 = new MyStack<>();
     static MyStack<Integer> peg3 = new MyStack<>();
     
+    /*
+    15 took 1 second
+    16 took 3 seconds +2
+    17 took 7 seconds +4
+    18 took 13 seconds +6
+    19 took 27 seconds +14
+    */
     public static void main(String[] args) {
-        int totalDisk = 10;
+        int totalDisk = 19;
         for (int i=totalDisk; i>0; i--) 
             peg1.push(i);
         

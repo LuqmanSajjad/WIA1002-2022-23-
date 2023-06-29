@@ -49,18 +49,7 @@ public class TowerOfHanoi {
     private void Display() {
         System.out.println(peg.toString());
     }
-    
-    
-    /*
-    simulation of the game
-    */
-    public static void main(String[] args) {
-        TowerOfHanoi peg1 = new TowerOfHanoi(4);    // the first peg has 4 disk
-        TowerOfHanoi peg2 = new TowerOfHanoi();
-        TowerOfHanoi peg3 = new TowerOfHanoi();
-        
-        solve(4, peg1, peg2, peg3);
-    }
+
     
     public static void solve(int disk, TowerOfHanoi source, TowerOfHanoi dest, TowerOfHanoi helper) {
         if (disk == 1)
