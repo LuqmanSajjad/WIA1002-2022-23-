@@ -107,7 +107,7 @@ public class multipleSort {
             System.arraycopy(list, list.length/2, secondHalf, 0, secondLength);
             mergeSort(secondHalf);
             
-            // mergeback
+            // mergeback both half into `list`
             merge(firstHalf, secondHalf, list);
         }
     }

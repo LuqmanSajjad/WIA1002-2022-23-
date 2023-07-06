@@ -4,6 +4,8 @@
  */
 package finalS11718;
 
+import java.util.LinkedList;
+
 /**
  *
  * @author jad
@@ -11,6 +13,7 @@ package finalS11718;
 public class Queue <E> {
     
     public static void main(String[] args) {
+        
         Queue<String> queue = new Queue<>(5);
         queue.enqueue("Au");
         queue.enqueue("K");
@@ -80,7 +83,4 @@ public class Queue <E> {
         }
         System.out.println(queue[front] + "\n");
     }
-        
-    
-    
 }
