@@ -2,26 +2,26 @@ package w13BST.SampleCodes;
 
 public class TestBSTDelete {
   public static void main(String[] args) {
-    BST<String> tree = new BST<String>();
-    tree.insert("George");
-    tree.insert("Michael");
-    tree.insert("Tom");
-    tree.insert("Adam");
-    tree.insert("Jones");
-    tree.insert("Peter");
-    tree.insert("Daniel");
+    BST<Integer> tree = new BST<>();
+    tree.insert(90);
+    tree.insert(50);
+    tree.insert(40);
+    tree.insert(30);
+    tree.insert(100);
+    tree.insert(200);
+    tree.insert(130);
     printTree(tree);
 
-    System.out.println("\nAfter delete George:");
-    tree.delete("George");
+    System.out.println("\nAfter delete 90 (root):");
+    tree.delete(90);
     printTree(tree);
 
-    System.out.println("\nAfter delete Adam:");
-    tree.delete("Adam");
+    System.out.println("\nAfter delete 50:");
+    tree.delete(50);
     printTree(tree);
 
-    System.out.println("\nAfter delete Michael:");
-    tree.delete("Michael");
+    System.out.println("\nAfter delete 130:");
+    tree.delete(130);
     printTree(tree);
   }
 
